@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-image: linear-gradient(
+          359.5deg,
+          rgba(17, 255, 189, 1) 5.7%,
+          rgba(151, 253, 225, 1) 83.2%
+        );
+      }
+      .container {
+          display: grid;
+          place-content: center;
+          height: 100vh;
+          width: 100%;
+        
+        
+      }
+
+      .titleContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        margin-top: 100px;
+      }
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 600px;
+        height: 600px;
+        background-image: linear-gradient(
+          129.1deg,
+          rgba(243, 199, 83, 1) 26.8%,
+          rgba(18, 235, 207, 1) 114.1%
+        );
+      }
+
+      .formItem {
+        
+          display: flex;
+          border: none;
+          border-radius: 10px;
+          margin: 10px;
+          padding: 15px 45px;
+          width: 200px;
+        
+      }
+      .formLabel {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+      }
+
+      .primaryButton {
+        padding: 10px;
+        width: 200px;
+        border-radius: 10px;
+      }
+
+      .btn-grad {
+        background-image: linear-gradient(
+          to right,
+          #314755 0%,
+          #26a0da 51%,
+          #314755 100%
+        );
+      }
+      .btn-grad {
+        margin: 10px;
+        padding: 15px 45px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+      }
+
+      .btn-grad:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }
+    </style>
+    <title>Reto Taller 2</title>
+  </head>
+  <body>
+    <header class="titleContainer">
+      <h1>Reto Taller 2</h1>
+    </header>
+
+    <section class="container">
+      <form class="form-container">
+        <label for="precio" class="formLabel"
+          >Precio
+          <input type="number" id="precio" class="formItem" />
+        </label>
+
+        <label for="cupon" class="formLabel">
+          Cupon aplicado
+          <input
+            type="text"
+            id="cupon"
+            placeholder="Basico / Intermedio / Premium"
+            class="formItem"
+          />
+        </label>
+
+        <button type="button" class="btn-grad" onclick="precioDescuento()">Calcular precio final</button>
+
+        <p id="resultadoPrecio"></p>
+      </form>
+    </section>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
